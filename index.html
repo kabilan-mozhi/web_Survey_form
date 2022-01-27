@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en"> 
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>kabilan.com</title>
+    <link rel="stylesheet" href="CSS/style.css">
+</head>
+<body>
+    
+    <div class="container">
+        <header class="header">
+
+        <h1 id="title"class="text-center">Survey form</h1>
+        <p id="description"class="description text-center">Welcome.....!,thank you for taking the time to help us improve the platform</p>
+        </header>
+        <form id="Survey-form">
+            <div class="form-group">
+
+                <label id="name-lable" for="name">Name</label>
+                <input type="text" name="name" id="name" class="form-control"placeholder="Enter your name "required
+                />
+            </div>
+
+
+            <div class="form-group">
+                <label for="email" id="email-lable">Email</label>
+                <input type="email" id="email" name="email" class="form-control" placeholder="Enter your email"required/>
+            </div>
+
+
+            <div class="Form-group">
+
+                <label id="number-lable"for="number">Age <span class="clue">(optional)</span>       </label>
+                <input type="number" class="form-control" name="age" min="10" max="99" placeholder="age">
+
+
+            </div>
+            
+
+
+
+
+            <div class="form-group"><p>Select your department</p>
+                    <select name="role" id="dropdown" class="form-control" required>
+                        <option value="CSE">CSE</option>
+                        <option value="MCA">MCA</option>
+                        <option value="MSC">MSC</option>
+                        <option value="IT">IT</option>
+                        <option value="other">other</option>
+
+                    </select>
+                    
+
+
+
+                    <div class="form-group">
+                        <p>What is your favoret programing language</p>
+                        <select name="mostlike" class ="form-control"id="most-like">
+                            <option value="lang">CPP</option>
+                            <option value="lang">JAVA</option>
+                            <option value="lang">PY</option>
+                            <option value="lang">R</option>
+                            <option value="lang">other</option>
+                        </select>
+                    </div>
+                    
+
+
+
+
+                    <div class="form-group">
+                        <p>What did you like</p>
+                        <label for="like" ><input name="user-recommed"type="radio" class="input-radio" value="definitely" >Front-end</label>
+                    <label for="form-group"><input type="radio" class="input-radio"value="Back-end">Back-end</label>
+                    
+                    <label for="form-froup"><input type="checkbox" class="input-radio">not-sure</label>
+                    
+                    </div>
+                    <div class="form-group"><p>Any comments or Sugessions?</p>
+                    <textarea placeholder="Enter your commrnt here...!" name="comment" id="comments" class="input-textarea" rows="5" cols="30" aria-placeholder="Ent">
+                    
+                    </textarea>
+                    
+                    
+                    </div>
+
+
+
+
+            
+            
+            
+            
+            
+            
+            
+            </div>
+
+            <div class="form-group"><button id="submit" type="button" class="submit-button">Submit</button></div>
+
+
+
+        </form>
+        
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+    
+</body>
+</html>
