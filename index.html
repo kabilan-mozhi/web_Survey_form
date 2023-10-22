@@ -1,121 +1,531 @@
 <!DOCTYPE html>
-<html lang="en"> 
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>kabilan.com</title>
-    <link rel="stylesheet" href="CSS/style.css">
-</head>
-<body>
+    <title>Material 3 UI</title>
+    <!-- Link Material Design 3 CSS -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://unpkg.com/@mui/material@5.3.3/dist/mui.min.css">
     
-    <div class="container">
-        <header class="header">
-
-        <h1 id="title"class="text-center">Survey form</h1>
-        <p id="description"class="description text-center">Welcome.....!,thank you for taking the time to help us improve the platform</p>
-        </header>
-        <form id="Survey-form">
-            <div class="form-group">
-
-                <label id="name-lable" for="name">Name</label>
-                <input type="text" name="name" id="name" class="form-control"placeholder="Enter your name "required
-                />
-            </div>
-
-
-            <div class="form-group">
-                <label for="email" id="email-lable">Email</label>
-                <input type="email" id="email" name="email" class="form-control" placeholder="Enter your email"required/>
-            </div>
-
-
-            <div class="Form-group">
-
-                <label id="number-lable"for="number">Age <span class="clue">(optional)</span>       </label>
-                <input type="number" class="form-control" name="age" min="10" max="99" placeholder="age">
-
-
-            </div>
+    <style>
+        body {
+            height: 100%;
+            font-family: 'Noto Sans', sans-serif;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-image: url(image/desktopbackground.jpg); /* Replace 'background.jpg' with your image file name */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
             
-
-
-
-
-            <div class="form-group"><p>Select your department</p>
-                    <select name="role" id="dropdown" class="form-control" required>
-                        <option value="CSE">CSE</option>
-                        <option value="MCA">MCA</option>
-                        <option value="MSC">MSC</option>
-                        <option value="IT">IT</option>
-                        <option value="other">other</option>
-
-                    </select>
-                    
-
-
-
-                    <div class="form-group">
-                        <p>What is your favoret programing language</p>
-                        <select name="mostlike" class ="form-control"id="most-like">
-                            <option value="lang">CPP</option>
-                            <option value="lang">JAVA</option>
-                            <option value="lang">PY</option>
-                            <option value="lang">R</option>
-                            <option value="lang">other</option>
-                        </select>
-                    </div>
-                    
-
-
-
-
-                    <div class="form-group">
-                        <p>What did you like</p>
-                        <label for="like" ><input name="user-recommed"type="radio" class="input-radio" value="definitely" >Front-end</label>
-                    <label for="form-group"><input type="radio" class="input-radio"value="Back-end">Back-end</label>
-                    
-                    <label for="form-froup"><input type="checkbox" class="input-radio">not-sure</label>
-                    
-                    </div>
-                    <div class="form-group"><p>Any comments or Sugessions?</p>
-                    <textarea placeholder="Enter your commrnt here...!" name="comment" id="comments" class="input-textarea" rows="5" cols="30" aria-placeholder="Ent">
-                    
-                    </textarea>
-                    
-                    
-                    </div>
-
-
-
+        }
+        
+        .topbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
 
             
+            color: black;
+            padding: 10px;
+        }
+        .header {
+            color: black;
+            font-size: 27px;
+            background-color: rgba(84, 85, 86, 0.473);
+        }
+        .links {
+            display: flex;
+        }
+        .link-item {
+            margin-right: 20px;
+            cursor: pointer;
+            color: black;
+        }
+        a{
+            text-decoration: none;
+            color: white;
+            }
+        .main-container {
+            
+            display: flex;
+            height: 100vh;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            
+           
+        }
+        .container{
+            display: flex;
+            width: 50%;
+            height: 56%;
+            margin: 16px;
+            background-color: antiquewhite;
+            display: flex;
+            box-shadow: 0 0 15px gray;
+            border-radius:  12px;
             
             
-            
-            
-            
-            
-            </div>
+            background-size: cover;
 
-            <div class="form-group"><button id="submit" type="button" class="submit-button">Submit</button></div>
+        }
+        .container p{
+            margin-top: 0;
+        }
+       
+
+       
+        .ffcode h1{
+            margin-top: 20%;
+            font-size: 100px;
+            color: rgba(13, 13, 13, 0.651);
+            
+        }
+        .container1 {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            display: flex;
+            width: 80%;
+            height: 25%;
+            margin: 50px;
+            
+    
+            background-size: cover;
+        }
+        .small-container {
+            display: flex;
+            width: 50%;
+            height: 60%;
+            align-items: center;
+            justify-content: center;
+            
+        }
+        .small-container1 {
+            font-size: 30px;
+            color:white ;
+            background-color:rgb(240, 187, 10) ;
+            border-radius: 10px;
+            box-shadow: 0 0 10px gray;
+            display: flex;
+            width: 50%;
+            height: 60%;
+            align-items: center;
+            justify-content: center;
+            
+        }
+        .center-container {
+            margin-top: 0;
+           
+            display: flex;
+            width: 50%;
+            height: 50%;
+            align-items: center;
+            justify-content: center;
+            
+        }
+            /*result countown properties*/
+             .result{
+                
+            
+                background-color: #333;
+                width: 100%;
+                height: 40%;
+                border-radius: 12px;
+                
+                display: flex;
+                justify-content: center;
+                
+                align-items: center;
+                
+            }
+            .result span{
+                margin-top: 20px;
+                display: flex;
+                justify-content: center;
+            }
 
 
 
-        </form>
+                   
+                   /* Register Popup Styles */
+            .register-popup {
+                flex-direction: column;
+                align-items: center;
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0,0,0,0.4);
+            }
+            input[type="text"],
+            input[type="email"] {
+                
+                width: 90%;
+                height: 40px;
+                border-radius: 10px;
+                border: 2px solid #333;
+                padding: 12px;
+                margin-bottom: 20px;
+            }
+            
+
+            .register-content {
+            background-color: #fefefe;
+            margin: 15% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 30%;
+            margin-bottom: 15px;
+            
+
+    
+            }
+            .register-content h2{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .register-content form {
+                 display: flex;
+                 flex-direction: column;
+            align-items: center;
+            }
+.close {
+    color: #aaa;
+    
+}
+
+            .close {
+                color: #aaa;
+                float: right;
+                font-size: 28px;
+                font-weight: bold;
+            }
+
+            .close:hover,
+            .close:focus {
+                color: black;
+                text-decoration: none;
+                cursor: pointer;
+            }
+
+
+
+
+
+
+
+
+
+
+         /*Mobil responsive view*/
+        @media only screen and (max-width: 600px) {
+            body {
+            font-family: 'Noto Sans', sans-serif;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-image: url('image/backhround.jpg'); /* Replace 'background.jpg' with your image file name */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            }
+            
+            .container1 {
+                margin-top: 50px;
+                flex-direction: column;
+                align-items: center;
+                height: 100%;
+                margin: 0;
+                width: 100%;
+                height: 50%; margin-top: 0px;
+                
+            }
+            .container {
+                flex-direction: column;
+                align-items: center;
+                height: 100%;
+                 box-shadow: 0 0 10px gray;
+                background-image: url(image/bottom.jpg); height: 100%;width: 100%;margin-top: 0;
+            }
+
+            /*Small conteainer  in bottom page that have the countdown*/
+            
+            .small-container1 {
+                
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: rgba(255, 225, 54, 0);
+               box-shadow: none;
+                
+        
+                
+                height: 50%;
+                width: 100%;
+                background-color:rgba(255, 255, 255, 0); color: azure; font-size: 25px;
+            }
+            
+           
+            .small-container {
+                align-items: center;
+                background-color: rgba(255, 225, 54, 0);
+                background-image: url(image/mob\ ff.png);
+                background-size: cover;
+                background-size: 100%;
+                background-repeat: no-repeat;                
+                height: 100%;
+                width: 100%;
+                
+            }
+            /*center div of the container which present oin the both container(bottom part)and container1 (toppart)*/
+             .center-container {
+                height: 40%;
+                border-radius: 20px;
+        
+                background-image: url(image/inside\ container.jpg);
+                 background-size: cover;
+                         background-position: center;
+                background-repeat: no-repeat;
+                box-shadow: 0 0 10px rgb(171, 168, 168);
+                    width: 50%;
+                     }
+            
+            /*result countown properties*/
+             .result{
+                margin-top: 5%;
+                background-color: black;
+                width: 100%;
+                height: 24%;
+                
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                
+            }
+            .result span{
+                margin-top: 0;
+                display: flex;
+                justify-content: center;
+                
+            }
+          
+            a{
+            text-decoration: none;
+            color: white;
+            }
+            /*Topbar header*/
+            .header{
+            color: black;
+            font-size: medium bold;
+            font-family: 'Noto Sans', sans-serif;
+            background-color: rgba(0, 0, 0, 0.002);
+             }
+             /*Topbar items*/
+             .link-item{
+             font-size:x-small;
+             font-family: 'Noto Sans', sans-serif;
+             color: black;
+             }
+
+             /*Top container charecter background*/
+           
+            /*Top Container FF CODES headder*/
+            .ffcode{
+                height: 100%; width: 100%; margin-right: 10%;
+
+                }
+         .ffcode h1{
+                 font-size: 30px;
+                    width: 100%; height: 20%; margin: 10%; margin-top: 30%;
+                }
+                                                 /* Register Popup Styles */
+      
+          .register-content {
+                width: 80%;
+                margin: 15% auto;
+                display: flex;
+    flex-direction: column;
+    align-items: center;
+                
+
+            }
+            input[type="text"],
+            input[type="email"] {
+                
+                height: 40px;
+                border-radius: 5px;
+                border: 1px solid #ccc;
+                padding: 10px;
+                margin-bottom: 15px;
+                width:100%; /* Adjust the width as needed */
+    margin-top: 10px; /* Adjust the margin as needed */
+            }
+            .register-content form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+}
+
+
+
+ 
+
         
 
-
-
-
-
-
-
-
-
-
-
+    </style>
+</head>
+<body>
+    <!--Top bar of the page which ha header name and navigation and notes content-->
+    <div class="topbar">
+        <div class="header">FF CODES</div>
+        <div class="links">
+            <div class="link-item">Lucky Meter</div>
+            <div class="link-item"><a href="#"  onclick="openRegisterPopup()" >Register</a></div>
+        
+            <div class="link-item">About</div>
+        </div>
     </div>
+
+    <!--main container which has the content of the page-->
+    <div class="main-container"  style="margin-top: 0px;">
+        <div class="container1"> <!--Top container-->
+            <div class="small-container" >
+               
+            </div>
+        </div>
+        <!--Bottom Contatiner of the page which has countown containers and result -->
+        <div class="container" style="display: flex;flex-direction:column;align-items: center;align-items: center;" ><!--Bottom container-->
+            <h1 style="color: white; font-family: 'Noto Sans', sans-serif; font-weight: 700;">TRY YOUR LUCK</h1>
+            <div class="center-container"  ><!--The containe rwhich placed inside of the container-->
+                <div class="small-container1  " id="timer"  > 00:00:00</div><br>
+               
+                
+            </div>
+
+            <!--below code file get the random user from the database -->
+            <div class="result"  id="random-user" style="color: white; display: flex;justify-content: center; flex-direction: column; font-size: 25px;"></div>
+            <iframe src="get_random_user.php" style="display: none;"></iframe>
+           
+        </div>
     
+    </div>
+   
+
+
+    <script>
+        // Timer logic
+        function startTimer(duration, display) {
+            var timer = localStorage.getItem("timer") || duration;
+            setInterval(function () {
+                var minutes, seconds;
+    
+                minutes = parseInt(timer / 60, 10);
+                seconds = parseInt(timer % 60, 10);
+    
+                minutes = minutes < 10 ? "0" + minutes : minutes;
+                seconds = seconds < 10 ? "0" + seconds : seconds;
+    
+                display.textContent = "00:" + minutes + ":" + seconds;
+    
+                localStorage.setItem("timer", timer);
+    
+                timer--;
+    
+                if (timer < 0) {
+                    fetchRandomUser();
+                    timer = duration;
+                }
+            }, 1000);
+        }
+    
+        // Fetch random user from the database
+        function fetchRandomUser() {
+            fetch('get_random_user.php')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('random-user').innerHTML = data;
+                })
+                .catch(error => console.error('Error:', error));
+        }
+    
+        // Start the timer for 1 minute (60 seconds)
+        window.onload = function () {
+            var oneMinute = 60, // Updated the variable to oneMinute
+                display = document.querySelector('#timer');
+            startTimer(oneMinute, display);
+        };
+    </script>
+   <div id="registerPopup" class="register-popup">
+    <div class="register-content" >
+        <span class="close" onclick="closeRegisterPopup()">&times;</span>
+        <h2>Register</h2>
+        <form action="register.php" method="post">
+            <input type="text" name="username" placeholder="Name" required><br><br>
+            <input type="email" name="emailid" placeholder="Email" required><br><br>
+            <input type="submit" value="Register" style="height: 40px;width: 40%;background-color: gold; border: none; border-radius: 10px; color: white;">
+        </form>
+        
+        <div id="registrationSuccessMessage" style="display: none; margin-top: 10px; color: green;">Registration successful!</div>
+    </div>
+</div>
+    
+
+    
+
+    <script>
+        // Open the registration popup
+        function openRegisterPopup() {
+            document.getElementById("registerPopup").style.display = "block";
+        }
+    
+        // Close the registration popup
+        function closeRegisterPopup() {
+            document.getElementById("registerPopup").style.display = "none";
+        }
+    
+        // Submit form and display success message
+        function submitForm(event) {
+            // Simulating a successful registration
+            document.getElementById("registrationSuccessMessage").style.display = "block";
+            setTimeout(function() {
+                document.getElementById("registrationSuccessMessage").style.display = "none";
+                closeRegisterPopup();
+            }, 2000); // Change this time interval as needed
+            return false; // Prevent the form from actually submitting
+        }
+          // Mobile responsive adjustments for the registration container
+          if (window.innerWidth <= 600) {
+            var registerContent = document.querySelector('.register-content');
+            if (registerContent) {
+                registerContent.style.width = '80%';
+                registerContent.style.margin = '15% auto';
+            }
+        }
+    </script>
+    
+</body>
+</html>
+
 </body>
 </html>
